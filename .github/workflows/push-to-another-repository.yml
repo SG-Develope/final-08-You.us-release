@@ -20,7 +20,7 @@ jobs:
             name: REPO_TEAM
             token: TOKEN_HJA
             email: EMAIL_HJA
-          - owner: sohyerim
+          - owner: sohyerim-dev
             name: REPO_TEAM
             token: TOKEN_SOHYERIM
             email: EMAIL_SOHYERIM
