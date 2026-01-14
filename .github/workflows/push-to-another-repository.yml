@@ -12,19 +12,19 @@ jobs:
     strategy:
       matrix:
         repo:
-          - owner: SG-Develope
+          - owner: OWNER_LSG
             name: REPO_TEAM
             token: TOKEN_LSG
             email: EMAIL_LSG
-          - owner: hanon-a
+          - owner: OWNER_HJA
             name: REPO_TEAM
             token: TOKEN_HJA
             email: EMAIL_HJA
-          - owner: sohyerim-dev
+          - owner: OWNER_SOHYERIM
             name: REPO_TEAM
             token: TOKEN_SOHYERIM
             email: EMAIL_SOHYERIM
-          - owner: kyk9412
+          - owner: OWNER_KYOUNG
             name: REPO_TEAM
             token: TOKEN_KYOUNG
             email: EMAIL_KYOUNG 
