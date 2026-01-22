@@ -6,7 +6,7 @@ export default function IntroPage() {
     const router = useRouter()
 
   const markVisited = () => {
-    localStorage.setItem('hasVisited', 'true')
+    document.cookie = 'hasVisited=true; path=/; max-age=31536000'
   }
 
   const goToTest = () => {
