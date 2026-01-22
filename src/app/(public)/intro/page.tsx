@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation'
 
 export default function IntroPage() {
-    const router = useRouter()
+  const router = useRouter()
 
   const markVisited = () => {
     document.cookie = 'hasVisited=true; path=/; max-age=31536000'
@@ -26,5 +26,4 @@ export default function IntroPage() {
       <button onClick={goToMain}>메인으로 가기</button>
     </div>
   )
-
 }

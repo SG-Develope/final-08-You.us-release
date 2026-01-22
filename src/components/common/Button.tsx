@@ -28,10 +28,8 @@ export default function Button({
      disabled:opacity-50
       disabled:cursor-not-allowed 
       cursor-pointer`
-  
-  
+
   const appliedVariant = disabled ? 'disabled' : variant
-  
 
   const variantStyle = {
     primary: 'bg-primary  text-gray-50 hover:bg-primary-hover ',
