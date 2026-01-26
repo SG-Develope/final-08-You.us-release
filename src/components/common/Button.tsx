@@ -1,4 +1,26 @@
 import { ReactNode } from 'react'
+import { extendTailwindMerge } from 'tailwind-merge'
+
+
+const twMerge = extendTailwindMerge({
+  extend: {
+    classGroups: {
+      'font-size': [
+        // Title
+        'text-title-lg',
+        'text-title-md',
+        'text-title-sm',
+        // Body
+        'text-body-lg',
+        'text-body-md',
+        'text-body-sm',
+        // UI
+        'text-button',
+        'text-caption',
+      ],
+    },
+  },
+})
 
 interface ButtonProps {
   children: ReactNode
@@ -19,12 +41,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   // 기본 버튼 색상/크기 클래스
-  const baseStyles = ` px-[var(--spacing-button-x)] 
-    py-[var(--spacing-button-y)] 
-    font-pretendard rounded-lg 
-    font-bold
-    transition-colors
-      `
+  const baseStyles = `px-[var(--spacing-button-x)] py-[0.1rem] font-pretendard rounded-lg font-bold transition-colors `
 
   const appliedVariant = disabled ? 'disabled' : variant
 
@@ -40,7 +57,7 @@ export default function Button({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`${baseStyles} ${variantStyle[appliedVariant]} ${className}`}
+      className={twMerge(baseStyles, variantStyle[appliedVariant], className)}
       {...props}
     >
       {children}
