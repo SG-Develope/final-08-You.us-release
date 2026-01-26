@@ -1,0 +1,39 @@
+import Link from "next/link";
+
+interface SmallCategoryProps {
+  categories: string[]
+  categoryData: Record<string, string[]>
+}
+
+export default function SmallCategory({ categories, categoryData } :SmallCategoryProps) {
+  return (
+    <div role="menu" aria-label="상세 카테고리" className="absolute left-0 top-full z-50 hidden w-full bg-gray-100 shadow-lg group-hover:block">
+      <div className="px-6 py-5">
+        <div className="flex flex-wrap gap-7">
+          {categories.map((category) => (
+            <div
+              key={category}
+              className="w-[14%] rounded p-7 transition-colors hover:bg-category"
+            >
+              <h2 className="text-primary mb-4 border-b-2 pb-2 pl-1.5 font-bold">
+                {category}
+              </h2>
+              <ul className="space-y-2">
+                {categoryData[category]?.map((subCategory) => (
+                  <li key={subCategory}>
+                    <Link
+                      href={`/category/${category}/${subCategory}`}
+                      className="hover:text-primary before:bg-primary relative inline-block text-body-sm text-gray-700 transition-colors before:absolute before:top-1/2 before:-left-4 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full before:opacity-0 before:transition-opacity before:content-[''] hover:before:opacity-100"
+                    >
+                      {subCategory}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}

@@ -1,0 +1,84 @@
+import Link from 'next/link'
+import Button from '../Button'
+
+export default function DesktopFooter() {
+  return (
+    <div className="px-5 py-4 lg:py-8">
+      <div className="flex items-center justify-between px-6">
+        <div className="flex items-center gap-10">
+          <div className="hidden rounded-xl border-2 border-gray-200 bg-white p-3.5 shadow-sm lg:block">
+            <img
+              src="./icons/LOGO.svg"
+              alt="로고 사진"
+              width={135}
+              height={40}
+            />
+          </div>
+
+          <div className="flex flex-col gap-1 lg:gap-5">
+            <div className="mb-6 flex items-center justify-start gap-1 text-[10px] lg:text-xs">
+              {['회사소개', '이용약관', '개인정보처리방침', '분쟁사항'].map(
+                (link, index) => (
+                  <div key={index}>
+                    <Link
+                      href="#"
+                      className="font-medium text-gray-700 transition-colors active:text-rose-600"
+                    >
+                      {link}
+                    </Link>
+                    {index < 3 && (
+                      <span className="mx-0.5 text-gray-400">|</span>
+                    )}
+                  </div>
+                ),
+              )}
+            </div>
+
+            <div className="mb-5 space-y-1.5 text-[10px] text-gray-600 lg:text-xs">
+              <div>
+                <span className="text-body-sm font-semibold text-gray-800">
+                  COMPANY
+                </span>{' '}
+                (주)유앤어스 | 대표이사 : 소찬덕
+              </div>
+
+              <div>사업자등록번호: 105-813-5526</div>
+
+              <div>OWNER: 소찬덕 TEL: 070-4567-7868</div>
+
+              <div>개인정보보호책임자 : 한철아</div>
+
+              <div>
+                서울 마포구 강변북로 141 5층 5호 2동(목해동, 서울센터) |
+                고객센터번호 1577 분에
+              </div>
+
+              <div>통신판매 신고번호 - 김태경 (Vercell 해당자)</div>
+            </div>
+
+            <div className="mb-6 space-y-1 text-[10px] text-gray-500 lg:text-xs">
+              <p>고객지원주소 : 서울특별시 마포구 일명플러스 2호</p>
+              <p>
+                당일 공지사항에 있는 모 상품 정보는시간지역에 부 연절은 내외
+                적용하지만 보험다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <Link
+          href={'https://m.epost.go.kr/'}
+          className="ml-2 hidden shrink-0 lg:block"
+        >
+          <Button className="h-12.5">우체국 조회하기</Button>
+        </Link>
+      </div>
+      <div className="mb-6 border-t border-gray-200 pt-4 pb-1 text-center lg:mb-0">
+        <p className="text-xs text-gray-500">
+          Copyright © 2026{' '}
+          <span className="font-semibold text-gray-700">you,Us</span> All rights
+          reserved.
+        </p>
+      </div>
+    </div>
+  )
+}
