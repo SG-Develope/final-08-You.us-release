@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 interface MobileHeaderProps {
@@ -32,14 +33,14 @@ export default function MobileHeader({
       </button>
 
       <Link href="/" className="absolute left-1/2 -translate-x-1/2">
-        <img src="/icons/LOGO.svg" alt="You,Us 로고" className="h-8 w-auto" />
+        <Image src="/icons/LOGO.svg" alt="You,Us 로고" className="h-8 w-auto" />
       </Link>
 
       <nav aria-label="빠른 메뉴">
         <ul className="flex gap-4">
           <li>
             <Link href="/mypage">
-              <img
+              <Image
                 src="/icons/User.svg"
                 alt="마이페이지"
                 className="h-8 w-auto"
@@ -48,7 +49,7 @@ export default function MobileHeader({
           </li>
           <li>
             <Link href="/cart">
-              <img
+              <Image
                 src="/icons/Basket.svg"
                 alt="장바구니"
                 className="h-8 w-auto"

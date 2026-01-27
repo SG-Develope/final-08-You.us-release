@@ -1,8 +1,9 @@
 import Link from 'next/link'
+import type { Category, categoryData as CategoryDataType } from './Header'
 
 interface SmallCategoryProps {
-  categories: string[]
-  categoryData: Record<string, string[]>
+  categories: Category[]
+  categoryData: typeof CategoryDataType
 }
 
 export default function SmallCategory({

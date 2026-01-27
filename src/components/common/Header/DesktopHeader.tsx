@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Button from '../Button'
 import DesktopCategoryDropdown from './DesktopCategoryDropdown'
+import Image from 'next/image'
 
 export default function DesktopHeader() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -14,7 +15,7 @@ export default function DesktopHeader() {
       <div className="flex h-32.5 items-center justify-between px-4">
         <div className="flex flex-1 items-center gap-6">
           <Link href="/" className="shrink-0">
-            <img
+            <Image
               src="/icons/LOGO.svg"
               alt="You,Us 로고"
               className="h-10 w-auto"
@@ -25,7 +26,7 @@ export default function DesktopHeader() {
             variant="primary"
             className="flex h-10 items-center gap-2 px-4 text-sm leading-none whitespace-nowrap"
           >
-            <img src="/icons/AiButton.svg" alt="" />
+            <Image src="/icons/AiButton.svg" alt="" />
             AI 추천받기
           </Button>
 

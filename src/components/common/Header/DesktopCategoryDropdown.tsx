@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { categories, categoryData } from './Header'
 import SmallCategory from './SmallCategory'
+import Image from 'next/image'
 
 export default function DesktopCategoryDropdown() {
   return (
@@ -26,7 +27,7 @@ export default function DesktopCategoryDropdown() {
         <ul className="flex gap-6" aria-label="빠른 메뉴">
           <li>
             <Link href="/mypage" className="block">
-              <img
+              <Image
                 src="/icons/User.svg"
                 alt="마이페이지"
                 className="h-10 w-auto"
@@ -35,7 +36,7 @@ export default function DesktopCategoryDropdown() {
           </li>
           <li>
             <Link href="/cart" className="block">
-              <img
+              <Image
                 src="/icons/Basket.svg"
                 alt="장바구니"
                 className="h-10 w-auto"
