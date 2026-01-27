@@ -1,13 +1,14 @@
 import Button from '@/components/common/Button'
 import Input from '@/components/common/Input'
 import type { LoginProps } from '@/types/login.types'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function NormalLogin({ handleLoginType }: LoginProps) {
   return (
     <div className="container mx-auto flex h-screen w-fit flex-col items-center justify-center">
       <h1 className="sr-only">로그인 페이지</h1>
-      <img src="/icons/LOGO.svg" className="mb-15 w-70" alt="유어스" />
+      <Image src="/icons/LOGO.svg" className="mb-15 w-70" alt="유어스" />
 
       <Input placeholder="아이디" className="mb-button-y w-82.5" />
       <Input placeholder="패스워드" className="w-82.5" />

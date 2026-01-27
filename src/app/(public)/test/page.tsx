@@ -6,6 +6,7 @@ import Footer from '@/components/common/Footer/Footer'
 import Header from '@/components/common/Header/Header'
 import Input from '@/components/common/Input'
 import Pagination from '@/components/common/Pagination'
+import Image from 'next/image'
 
 export default function ThemeTestPage() {
   // const cookieStore = await cookies()
@@ -86,7 +87,7 @@ export default function ThemeTestPage() {
           >
             로그인
           </Button>
-          <img src="/icons/LOGO.svg" alt="아이콘"></img>
+          <Image src="/icons/LOGO.svg" alt="아이콘"></Image>
           <button className="radius-sm border">test</button>
           <Input type="text" placeholder="나는 지금 테스트 중이잖아" />
           <input type="text" placeholder="나는 지금 테스트 중이잖아" />

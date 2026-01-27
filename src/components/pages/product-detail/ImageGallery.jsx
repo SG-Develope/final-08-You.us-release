@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useState } from 'react'
 
 export default function ImageGallery() {
@@ -46,13 +47,13 @@ export default function ImageGallery() {
           <button
             key={index}
             onClick={() => setCurrentImage(index)}
-            className={`h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl transition-all ${
+            className={`h-20 w-20 shrink-0 overflow-hidden rounded-xl transition-all ${
               index === currentImage
                 ? 'ring-4 ring-rose-500' // 선택된 썸네일
                 : 'ring-2 ring-gray-200' // 선택 안된 썸네일
             }`}
           >
-            <img
+            <Image
               src={img}
               alt={`썸네일 ${index + 1}`}
               className="h-full w-full object-cover"

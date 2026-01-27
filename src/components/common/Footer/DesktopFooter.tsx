@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Button from '../Button'
+import Image from 'next/image'
 
 export default function DesktopFooter() {
   return (
@@ -7,7 +8,7 @@ export default function DesktopFooter() {
       <div className="flex items-center justify-between px-6">
         <div className="flex items-center gap-10">
           <div className="hidden rounded-xl border-2 border-gray-200 bg-white p-3.5 shadow-sm lg:block">
-            <img
+            <Image
               src="./icons/LOGO.svg"
               alt="로고 사진"
               width={135}

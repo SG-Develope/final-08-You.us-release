@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import styles from '@/app/(public)/intro/page.module.css'
+import Image from 'next/image'
 
 export default function IntroPage() {
   const markVisited = () => {
@@ -16,7 +17,7 @@ export default function IntroPage() {
       >
         선물 추천 쇼핑몰
       </h2>
-      <img
+      <Image
         src="/icons/LOGO.svg"
         className={`w-72.5 lg:w-112.5 ${styles.logo}`}
         alt="유어스"
