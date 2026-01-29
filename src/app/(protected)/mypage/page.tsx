@@ -31,11 +31,11 @@ export default function MyPage() {
       </section>
 
       <section className="flex flex-col gap-2">
-        <div className="flex items-center justify-between pb-1">
-          <h2 className="lg:text-caption text-body-lg font-bold">나의 후기</h2>
+        <div className="flex flex-row items-center justify-between pb-1">
+          <h2 className="llg:text-caption text-body-lg font-bold">나의 후기</h2>
           <Link
             href="/mypage/reviews"
-            className="text-body-sm place-self-end text-gray-500"
+            className="text-body-sm mt-2 place-self-start text-gray-500 sm:mt-0 sm:place-self-end"
           >
             <span className="sr-only">내 후기 더보기</span>
             <span aria-hidden="true">&gt;</span>
@@ -44,22 +44,24 @@ export default function MyPage() {
         </div>
         <ul className="flex flex-col gap-2">
           <li>
-            <div className="border-primary ml-3 flex items-center justify-between gap-2 border-y bg-white">
-              <Image
-                src="/images/products/mypage/image-food-fish.png"
-                alt="상품이미지"
-                width={100}
-                height={100}
-                className="border-primary m-5 h-25 w-25 shrink-0 rounded-lg border-2 object-cover"
-              />
-              <div className="mr-auto flex flex-col gap-2 *:line-clamp-1 *:shrink-0">
-                <p className="text-body-md line-clamp-1">
-                  옥돔&갈치&민어굴비 세트
-                </p>
-                <p className="text-body-md">119,000원</p>
-                <p>
-                  <span className="text-primary">★★★★★</span> <span>5/5</span>
-                </p>
+            <div className="border-primary ml-3 flex flex-col items-stretch justify-between gap-2 border-y bg-white sm:flex-row sm:items-center">
+              <div className="flex flex-row items-center sm:flex-1">
+                <Image
+                  src="/images/products/mypage/image-food-fish.png"
+                  alt="상품이미지"
+                  width={100}
+                  height={100}
+                  className="border-primary m-3 h-25 w-25 shrink-0 rounded-lg border-2 object-cover sm:m-5"
+                />
+                <div className="flex flex-col gap-2 pr-4 *:line-clamp-1 *:shrink-0 sm:mr-auto sm:p-0">
+                  <p className="text-body-md line-clamp-1">
+                    옥돔&갈치&민어굴비 세트
+                  </p>
+                  <p className="text-body-md">119,000원</p>
+                  <p>
+                    <span className="text-primary">★★★★★</span> <span>5/5</span>
+                  </p>
+                </div>
               </div>
               <time
                 dateTime="2026-01-01"
@@ -67,20 +69,23 @@ export default function MyPage() {
               >
                 작성일 : 2026.01.01
               </time>
-              <div className="flex shrink-0 flex-col gap-2 p-2">
-                <Link href="/mypage/reviews/1">
+              <div className="flex w-full shrink-0 flex-col gap-2 p-4 sm:w-auto sm:p-2">
+                <Link href="/mypage/reviews/2" className="w-full sm:w-auto">
                   <Button
                     aria-label="내가 쓴 후기 보기"
-                    className="text-body-sm py-button-y px-7"
+                    className="text-body-sm py-button-y w-full px-7 whitespace-nowrap sm:w-auto"
                   >
                     내 후기 보기
                   </Button>
                 </Link>
-                <Link href="/mypage/reviews/1/edit">
+                <Link
+                  href="/mypage/reviews/2/edit"
+                  className="w-full sm:w-auto"
+                >
                   <Button
                     aria-label="내 후기 수정하기"
                     variant="update"
-                    className="text-body-sm py-3.5 hover:bg-gray-200"
+                    className="text-body-sm w-full py-3.5 whitespace-nowrap hover:bg-gray-200 sm:w-auto"
                   >
                     수정하기
                   </Button>
@@ -89,22 +94,24 @@ export default function MyPage() {
             </div>
           </li>
           <li>
-            <div className="border-primary ml-3 flex items-center justify-between gap-2 border-y bg-white">
-              <Image
-                src="/images/products/mypage/image-food-meat.png"
-                alt="상품이미지"
-                width={100}
-                height={100}
-                className="border-primary m-5 h-25 w-25 shrink-0 rounded-lg border-2 object-cover"
-              />
-              <div className="mr-auto flex flex-col gap-2 *:line-clamp-1 *:shrink-0">
-                <p className="text-body-md line-clamp-1">
-                  횡성축협한우 1++ 프리미엄 1호
-                </p>
-                <p className="text-body-md">218,000원</p>
-                <p>
-                  <span className="text-primary">★★★★★</span> <span>5/5</span>
-                </p>
+            <div className="border-primary ml-3 flex flex-col items-stretch justify-between gap-2 border-y bg-white sm:flex-row sm:items-center">
+              <div className="flex flex-row items-center sm:flex-1">
+                <Image
+                  src="/images/products/mypage/image-food-meat.png"
+                  alt="상품이미지"
+                  width={100}
+                  height={100}
+                  className="border-primary m-3 h-25 w-25 shrink-0 rounded-lg border-2 object-cover sm:m-5"
+                />
+                <div className="flex flex-col gap-2 pr-4 *:line-clamp-1 *:shrink-0 sm:mr-auto sm:p-0">
+                  <p className="text-body-md line-clamp-1">
+                    횡성축협한우 1++ 프리미엄 1호
+                  </p>
+                  <p className="text-body-md">218,000원</p>
+                  <p>
+                    <span className="text-primary">★★★★★</span> <span>5/5</span>
+                  </p>
+                </div>
               </div>
               <time
                 dateTime="2026-01-01"
@@ -112,20 +119,23 @@ export default function MyPage() {
               >
                 작성일 : 2026.01.01
               </time>
-              <div className="flex shrink-0 flex-col gap-2 p-2">
-                <Link href="/mypage/reviews/2">
+              <div className="flex w-full shrink-0 flex-col gap-2 p-4 sm:w-auto sm:p-2">
+                <Link href="/mypage/reviews/2" className="w-full sm:w-auto">
                   <Button
                     aria-label="내가 쓴 후기 보기"
-                    className="text-body-sm py-button-y px-7"
+                    className="text-body-sm py-button-y w-full px-7 whitespace-nowrap sm:w-auto"
                   >
                     내 후기 보기
                   </Button>
                 </Link>
-                <Link href="/mypage/reviews/2/edit">
+                <Link
+                  href="/mypage/reviews/2/edit"
+                  className="w-full sm:w-auto"
+                >
                   <Button
                     aria-label="내 후기 수정하기"
                     variant="update"
-                    className="text-body-sm py-3.5 hover:bg-gray-200"
+                    className="text-body-sm w-full py-3.5 whitespace-nowrap hover:bg-gray-200 sm:w-auto"
                   >
                     수정하기
                   </Button>
