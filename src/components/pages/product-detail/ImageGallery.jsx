@@ -18,7 +18,9 @@ export default function ImageGallery() {
       {/* 큰 이미지 */}
       <div className="overflow-hidden rounded-3xl bg-white shadow-xl">
         <div className="relative aspect-square">
-          <img
+          <Image
+            width={600}
+            height={600}
             src={images[currentImage]}
             alt="제품 이미지"
             className="h-full w-full object-cover"
