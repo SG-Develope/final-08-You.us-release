@@ -32,7 +32,7 @@ export default function QuickMenu() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/mypage/whishlist" className="hover:underline">
+                  <Link href="/mypage/wishlist" className="hover:underline">
                     찜한선물보기
                   </Link>
                 </li>
