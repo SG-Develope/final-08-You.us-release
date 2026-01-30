@@ -157,12 +157,11 @@ export default function ReviewForm({
               취소
             </Button>
           </Link>
-          <Button
-            className="text-body-sm w-75 lg:w-40.5"
-            onClick={handleSubmit}
-          >
-            {submitText}
-          </Button>
+          <Link href="/mypage/reviews" className="w-75 lg:w-40.5">
+            <Button className="text-body-sm w-full" onClick={handleSubmit}>
+              {submitText}
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

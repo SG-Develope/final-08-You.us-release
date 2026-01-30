@@ -14,21 +14,25 @@ export default function OrderButtons({
 
   return (
     <div className="flex flex-col gap-2 p-2 *:w-full lg:*:w-[162px]">
-      <Button
-        aria-label="주문 상세 보기"
-        className="text-body-sm py shrink-0 px-2"
-      >
-        주문상세
-      </Button>
+      <Link href="/mypage/orders/1">
+        <Button
+          aria-label="주문 상세 보기"
+          className="text-body-sm py-button-y w-full shrink-0"
+        >
+          주문상세
+        </Button>
+      </Link>
 
       {isShipping ? (
-        <Button
-          aria-label="내 배송 조회하기"
-          variant="update"
-          className="text-body-sm"
-        >
-          배송현황
-        </Button>
+        <Link href="/mypage/delivery">
+          <Button
+            aria-label="내 배송 조회하기"
+            variant="update"
+            className="text-body-sm w-full shrink-0"
+          >
+            배송현황
+          </Button>
+        </Link>
       ) : reviewStatus === 'NONE' ? (
         <Link href="/mypage/reviews/create">
           <Button

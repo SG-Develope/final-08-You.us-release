@@ -21,8 +21,8 @@ export default function QuickMenu({ className }: QuickMenuProps) {
           <figcaption className="text-caption font-bold text-gray-900">
             홍길동님
           </figcaption>
-          <Link href="/mypage/profile" className="text-body-sm text-gray-500">
-            내 정보
+          <Link href="/mypage" className="text-body-sm text-gray-500">
+            마이페이지
           </Link>
         </figure>
         <div className="border-primary flex w-55 justify-center border-y bg-white p-10 text-gray-900">

@@ -96,7 +96,7 @@ export default function ReviewCard({
               </>
             ) : (
               <>
-                <Link href={`/mypage/orders`}>
+                <Link href={`/mypage/orders/1`}>
                   <Button className="text-body-sm w-full lg:w-[162px]">
                     주문 상세
                   </Button>

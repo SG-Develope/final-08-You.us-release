@@ -4,11 +4,11 @@ import Link from 'next/link'
 export default function ReviewsPage() {
   return (
     <main className="min-h-[500px]">
-      <h1>내 문의 목록</h1>
-      {/* 내 문의 목록 */}
-      <Link href="/mypage/reviews" className="w-75 lg:w-40.5">
+      <h1>배송 현황</h1>
+      {/* 배송 현황 정보 */}
+      <Link href="/mypage/orders" className="w-75 lg:w-40.5">
         <Button variant="update" className="text-body-sm w-full">
-          마이 페이지로 돌아가기
+          목록으로 돌아가기
         </Button>
       </Link>
     </main>
